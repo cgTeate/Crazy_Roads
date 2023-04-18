@@ -16,6 +16,9 @@ class GameViewController: UIViewController {
     var sceneView: SCNView!
     
     var cameraNode = SCNNode()
+    var mapNode = SCNNode() //contains all of the lanes as children, so we group them together
+    var lanes = [LaneNode]() //contains all of the lane nodes as you move through the game
+    var laneCount = 0 //used to position lanes correctly, each lane should be placed after the preceding lane
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -30,6 +33,18 @@ class GameViewController: UIViewController {
         scene = SCNScene()
         
         sceneView.scene = scene
+        
+        scene.rootNode.addChildNode(mapNode)
+        
+        for _ in 0..<20 {
+            let type = LaneType.grass
+            let lane = LaneNode(type: type, width: 21)
+            lane.position = SCNVector3(x: 0, y: 0, z: 5 - Float(laneCount))
+            laneCount += 1
+            lanes.append(lane)
+            mapNode.addChildNode(lane)
+            
+        }
     }
     
     //Create floor to use it as a plane, so we can position all of our elements on

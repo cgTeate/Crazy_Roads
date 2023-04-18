@@ -27,6 +27,7 @@
 		20C6E03029EF351C00465268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C6DFFA29EF351B00465268 /* Assets.xcassets */; };
 		20C6E03129EF351C00465268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C6DFFA29EF351B00465268 /* Assets.xcassets */; };
 		20C6E03229EF351C00465268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C6DFFA29EF351B00465268 /* Assets.xcassets */; };
+		20C6E03F29EF3EAE00465268 /* LaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E03E29EF3EAE00465268 /* LaneNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -48,6 +49,7 @@
 		20C6E02429EF351C00465268 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
 		20C6E02729EF351C00465268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
 		20C6E02929EF351C00465268 /* Crazy_Roads_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Crazy_Roads_macOS.entitlements; sourceTree = "<group>"; };
+		20C6E03E29EF3EAE00465268 /* LaneNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaneNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -113,6 +115,7 @@
 				20C6E00429EF351B00465268 /* GameViewController.swift */,
 				20C6E00629EF351B00465268 /* Main.storyboard */,
 				20C6E00929EF351B00465268 /* LaunchScreen.storyboard */,
+				20C6E03E29EF3EAE00465268 /* LaneNode.swift */,
 			);
 			path = "Crazy_Roads iOS";
 			sourceTree = "<group>";
@@ -277,6 +280,7 @@
 				20C6E00529EF351B00465268 /* GameViewController.swift in Sources */,
 				20C6E02A29EF351C00465268 /* GameController.swift in Sources */,
 				20C6E00329EF351B00465268 /* AppDelegate.swift in Sources */,
+				20C6E03F29EF3EAE00465268 /* LaneNode.swift in Sources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
 		};

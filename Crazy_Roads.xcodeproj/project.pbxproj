@@ -1,0 +1,666 @@
+// !$*UTF8*$!
+{
+	archiveVersion = 1;
+	classes = {
+	};
+	objectVersion = 56;
+	objects = {
+
+/* Begin PBXBuildFile section */
+		20C6E00329EF351B00465268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E00229EF351B00465268 /* AppDelegate.swift */; };
+		20C6E00529EF351B00465268 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E00429EF351B00465268 /* GameViewController.swift */; };
+		20C6E00829EF351B00465268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C6E00629EF351B00465268 /* Main.storyboard */; };
+		20C6E00B29EF351B00465268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C6E00929EF351B00465268 /* LaunchScreen.storyboard */; };
+		20C6E01329EF351B00465268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E01229EF351B00465268 /* AppDelegate.swift */; };
+		20C6E01529EF351C00465268 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E01429EF351C00465268 /* GameViewController.swift */; };
+		20C6E01829EF351C00465268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C6E01629EF351C00465268 /* Main.storyboard */; };
+		20C6E01B29EF351C00465268 /* LaunchScreen.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C6E01929EF351C00465268 /* LaunchScreen.storyboard */; };
+		20C6E02329EF351C00465268 /* AppDelegate.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E02229EF351C00465268 /* AppDelegate.swift */; };
+		20C6E02529EF351C00465268 /* GameViewController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E02429EF351C00465268 /* GameViewController.swift */; };
+		20C6E02829EF351C00465268 /* Main.storyboard in Resources */ = {isa = PBXBuildFile; fileRef = 20C6E02629EF351C00465268 /* Main.storyboard */; };
+		20C6E02A29EF351C00465268 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6DFF829EF351800465268 /* GameController.swift */; };
+		20C6E02B29EF351C00465268 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6DFF829EF351800465268 /* GameController.swift */; };
+		20C6E02C29EF351C00465268 /* GameController.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6DFF829EF351800465268 /* GameController.swift */; };
+		20C6E02D29EF351C00465268 /* Art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C6DFF929EF351800465268 /* Art.scnassets */; };
+		20C6E02E29EF351C00465268 /* Art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C6DFF929EF351800465268 /* Art.scnassets */; };
+		20C6E02F29EF351C00465268 /* Art.scnassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C6DFF929EF351800465268 /* Art.scnassets */; };
+		20C6E03029EF351C00465268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C6DFFA29EF351B00465268 /* Assets.xcassets */; };
+		20C6E03129EF351C00465268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C6DFFA29EF351B00465268 /* Assets.xcassets */; };
+		20C6E03229EF351C00465268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C6DFFA29EF351B00465268 /* Assets.xcassets */; };
+/* End PBXBuildFile section */
+
+/* Begin PBXFileReference section */
+		20C6DFF829EF351800465268 /* GameController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameController.swift; sourceTree = "<group>"; };
+		20C6DFF929EF351800465268 /* Art.scnassets */ = {isa = PBXFileReference; lastKnownFileType = wrapper.scnassets; path = Art.scnassets; sourceTree = "<group>"; };
+		20C6DFFA29EF351B00465268 /* Assets.xcassets */ = {isa = PBXFileReference; lastKnownFileType = folder.assetcatalog; path = Assets.xcassets; sourceTree = "<group>"; };
+		20C6DFFF29EF351B00465268 /* Crazy_Roads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crazy_Roads.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C6E00229EF351B00465268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20C6E00429EF351B00465268 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		20C6E00729EF351B00465268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20C6E00A29EF351B00465268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20C6E01029EF351B00465268 /* Crazy_Roads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crazy_Roads.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C6E01229EF351B00465268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20C6E01429EF351C00465268 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		20C6E01729EF351C00465268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20C6E01A29EF351C00465268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/LaunchScreen.storyboard; sourceTree = "<group>"; };
+		20C6E02029EF351C00465268 /* Crazy_Roads.app */ = {isa = PBXFileReference; explicitFileType = wrapper.application; includeInIndex = 0; path = Crazy_Roads.app; sourceTree = BUILT_PRODUCTS_DIR; };
+		20C6E02229EF351C00465268 /* AppDelegate.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = AppDelegate.swift; sourceTree = "<group>"; };
+		20C6E02429EF351C00465268 /* GameViewController.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameViewController.swift; sourceTree = "<group>"; };
+		20C6E02729EF351C00465268 /* Base */ = {isa = PBXFileReference; lastKnownFileType = file.storyboard; name = Base; path = Base.lproj/Main.storyboard; sourceTree = "<group>"; };
+		20C6E02929EF351C00465268 /* Crazy_Roads_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Crazy_Roads_macOS.entitlements; sourceTree = "<group>"; };
+/* End PBXFileReference section */
+
+/* Begin PBXFrameworksBuildPhase section */
+		20C6DFFC29EF351B00465268 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C6E00D29EF351B00465268 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C6E01D29EF351C00465268 /* Frameworks */ = {
+			isa = PBXFrameworksBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXFrameworksBuildPhase section */
+
+/* Begin PBXGroup section */
+		20C6DFF229EF351800465268 = {
+			isa = PBXGroup;
+			children = (
+				20C6DFF729EF351800465268 /* Crazy_Roads Shared */,
+				20C6E00129EF351B00465268 /* Crazy_Roads iOS */,
+				20C6E01129EF351B00465268 /* Crazy_Roads tvOS */,
+				20C6E02129EF351C00465268 /* Crazy_Roads macOS */,
+				20C6E00029EF351B00465268 /* Products */,
+			);
+			sourceTree = "<group>";
+		};
+		20C6DFF729EF351800465268 /* Crazy_Roads Shared */ = {
+			isa = PBXGroup;
+			children = (
+				20C6DFF829EF351800465268 /* GameController.swift */,
+				20C6DFF929EF351800465268 /* Art.scnassets */,
+				20C6DFFA29EF351B00465268 /* Assets.xcassets */,
+			);
+			path = "Crazy_Roads Shared";
+			sourceTree = "<group>";
+		};
+		20C6E00029EF351B00465268 /* Products */ = {
+			isa = PBXGroup;
+			children = (
+				20C6DFFF29EF351B00465268 /* Crazy_Roads.app */,
+				20C6E01029EF351B00465268 /* Crazy_Roads.app */,
+				20C6E02029EF351C00465268 /* Crazy_Roads.app */,
+			);
+			name = Products;
+			sourceTree = "<group>";
+		};
+		20C6E00129EF351B00465268 /* Crazy_Roads iOS */ = {
+			isa = PBXGroup;
+			children = (
+				20C6E00229EF351B00465268 /* AppDelegate.swift */,
+				20C6E00429EF351B00465268 /* GameViewController.swift */,
+				20C6E00629EF351B00465268 /* Main.storyboard */,
+				20C6E00929EF351B00465268 /* LaunchScreen.storyboard */,
+			);
+			path = "Crazy_Roads iOS";
+			sourceTree = "<group>";
+		};
+		20C6E01129EF351B00465268 /* Crazy_Roads tvOS */ = {
+			isa = PBXGroup;
+			children = (
+				20C6E01229EF351B00465268 /* AppDelegate.swift */,
+				20C6E01429EF351C00465268 /* GameViewController.swift */,
+				20C6E01629EF351C00465268 /* Main.storyboard */,
+				20C6E01929EF351C00465268 /* LaunchScreen.storyboard */,
+			);
+			path = "Crazy_Roads tvOS";
+			sourceTree = "<group>";
+		};
+		20C6E02129EF351C00465268 /* Crazy_Roads macOS */ = {
+			isa = PBXGroup;
+			children = (
+				20C6E02229EF351C00465268 /* AppDelegate.swift */,
+				20C6E02429EF351C00465268 /* GameViewController.swift */,
+				20C6E02629EF351C00465268 /* Main.storyboard */,
+				20C6E02929EF351C00465268 /* Crazy_Roads_macOS.entitlements */,
+			);
+			path = "Crazy_Roads macOS";
+			sourceTree = "<group>";
+		};
+/* End PBXGroup section */
+
+/* Begin PBXNativeTarget section */
+		20C6DFFE29EF351B00465268 /* Crazy_Roads iOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20C6E03529EF351C00465268 /* Build configuration list for PBXNativeTarget "Crazy_Roads iOS" */;
+			buildPhases = (
+				20C6DFFB29EF351B00465268 /* Sources */,
+				20C6DFFC29EF351B00465268 /* Frameworks */,
+				20C6DFFD29EF351B00465268 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Crazy_Roads iOS";
+			productName = "Crazy_Roads iOS";
+			productReference = 20C6DFFF29EF351B00465268 /* Crazy_Roads.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20C6E00F29EF351B00465268 /* Crazy_Roads tvOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20C6E03829EF351C00465268 /* Build configuration list for PBXNativeTarget "Crazy_Roads tvOS" */;
+			buildPhases = (
+				20C6E00C29EF351B00465268 /* Sources */,
+				20C6E00D29EF351B00465268 /* Frameworks */,
+				20C6E00E29EF351B00465268 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Crazy_Roads tvOS";
+			productName = "Crazy_Roads tvOS";
+			productReference = 20C6E01029EF351B00465268 /* Crazy_Roads.app */;
+			productType = "com.apple.product-type.application";
+		};
+		20C6E01F29EF351C00465268 /* Crazy_Roads macOS */ = {
+			isa = PBXNativeTarget;
+			buildConfigurationList = 20C6E03B29EF351C00465268 /* Build configuration list for PBXNativeTarget "Crazy_Roads macOS" */;
+			buildPhases = (
+				20C6E01C29EF351C00465268 /* Sources */,
+				20C6E01D29EF351C00465268 /* Frameworks */,
+				20C6E01E29EF351C00465268 /* Resources */,
+			);
+			buildRules = (
+			);
+			dependencies = (
+			);
+			name = "Crazy_Roads macOS";
+			productName = "Crazy_Roads macOS";
+			productReference = 20C6E02029EF351C00465268 /* Crazy_Roads.app */;
+			productType = "com.apple.product-type.application";
+		};
+/* End PBXNativeTarget section */
+
+/* Begin PBXProject section */
+		20C6DFF329EF351800465268 /* Project object */ = {
+			isa = PBXProject;
+			attributes = {
+				BuildIndependentTargetsInParallel = 1;
+				LastSwiftUpdateCheck = 1430;
+				LastUpgradeCheck = 1430;
+				TargetAttributes = {
+					20C6DFFE29EF351B00465268 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					20C6E00F29EF351B00465268 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+					20C6E01F29EF351C00465268 = {
+						CreatedOnToolsVersion = 14.3;
+					};
+				};
+			};
+			buildConfigurationList = 20C6DFF629EF351800465268 /* Build configuration list for PBXProject "Crazy_Roads" */;
+			compatibilityVersion = "Xcode 14.0";
+			developmentRegion = en;
+			hasScannedForEncodings = 0;
+			knownRegions = (
+				en,
+				Base,
+			);
+			mainGroup = 20C6DFF229EF351800465268;
+			productRefGroup = 20C6E00029EF351B00465268 /* Products */;
+			projectDirPath = "";
+			projectRoot = "";
+			targets = (
+				20C6DFFE29EF351B00465268 /* Crazy_Roads iOS */,
+				20C6E00F29EF351B00465268 /* Crazy_Roads tvOS */,
+				20C6E01F29EF351C00465268 /* Crazy_Roads macOS */,
+			);
+		};
+/* End PBXProject section */
+
+/* Begin PBXResourcesBuildPhase section */
+		20C6DFFD29EF351B00465268 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C6E00829EF351B00465268 /* Main.storyboard in Resources */,
+				20C6E00B29EF351B00465268 /* LaunchScreen.storyboard in Resources */,
+				20C6E03029EF351C00465268 /* Assets.xcassets in Resources */,
+				20C6E02D29EF351C00465268 /* Art.scnassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C6E00E29EF351B00465268 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C6E01829EF351C00465268 /* Main.storyboard in Resources */,
+				20C6E01B29EF351C00465268 /* LaunchScreen.storyboard in Resources */,
+				20C6E03129EF351C00465268 /* Assets.xcassets in Resources */,
+				20C6E02E29EF351C00465268 /* Art.scnassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C6E01E29EF351C00465268 /* Resources */ = {
+			isa = PBXResourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C6E02829EF351C00465268 /* Main.storyboard in Resources */,
+				20C6E03229EF351C00465268 /* Assets.xcassets in Resources */,
+				20C6E02F29EF351C00465268 /* Art.scnassets in Resources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXResourcesBuildPhase section */
+
+/* Begin PBXSourcesBuildPhase section */
+		20C6DFFB29EF351B00465268 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C6E00529EF351B00465268 /* GameViewController.swift in Sources */,
+				20C6E02A29EF351C00465268 /* GameController.swift in Sources */,
+				20C6E00329EF351B00465268 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C6E00C29EF351B00465268 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C6E01529EF351C00465268 /* GameViewController.swift in Sources */,
+				20C6E02B29EF351C00465268 /* GameController.swift in Sources */,
+				20C6E01329EF351B00465268 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+		20C6E01C29EF351C00465268 /* Sources */ = {
+			isa = PBXSourcesBuildPhase;
+			buildActionMask = 2147483647;
+			files = (
+				20C6E02529EF351C00465268 /* GameViewController.swift in Sources */,
+				20C6E02C29EF351C00465268 /* GameController.swift in Sources */,
+				20C6E02329EF351C00465268 /* AppDelegate.swift in Sources */,
+			);
+			runOnlyForDeploymentPostprocessing = 0;
+		};
+/* End PBXSourcesBuildPhase section */
+
+/* Begin PBXVariantGroup section */
+		20C6E00629EF351B00465268 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20C6E00729EF351B00465268 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		20C6E00929EF351B00465268 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20C6E00A29EF351B00465268 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		20C6E01629EF351C00465268 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20C6E01729EF351C00465268 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+		20C6E01929EF351C00465268 /* LaunchScreen.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20C6E01A29EF351C00465268 /* Base */,
+			);
+			name = LaunchScreen.storyboard;
+			sourceTree = "<group>";
+		};
+		20C6E02629EF351C00465268 /* Main.storyboard */ = {
+			isa = PBXVariantGroup;
+			children = (
+				20C6E02729EF351C00465268 /* Base */,
+			);
+			name = Main.storyboard;
+			sourceTree = "<group>";
+		};
+/* End PBXVariantGroup section */
+
+/* Begin XCBuildConfiguration section */
+		20C6E03329EF351C00465268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = dwarf;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				ENABLE_TESTABILITY = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_DYNAMIC_NO_PIC = NO;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_OPTIMIZATION_LEVEL = 0;
+				GCC_PREPROCESSOR_DEFINITIONS = (
+					"DEBUG=1",
+					"$(inherited)",
+				);
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = INCLUDE_SOURCE;
+				MTL_FAST_MATH = YES;
+				ONLY_ACTIVE_ARCH = YES;
+				SWIFT_ACTIVE_COMPILATION_CONDITIONS = DEBUG;
+				SWIFT_OPTIMIZATION_LEVEL = "-Onone";
+			};
+			name = Debug;
+		};
+		20C6E03429EF351C00465268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ALWAYS_SEARCH_USER_PATHS = NO;
+				CLANG_ANALYZER_NONNULL = YES;
+				CLANG_ANALYZER_NUMBER_OBJECT_CONVERSION = YES_AGGRESSIVE;
+				CLANG_CXX_LANGUAGE_STANDARD = "gnu++20";
+				CLANG_ENABLE_MODULES = YES;
+				CLANG_ENABLE_OBJC_ARC = YES;
+				CLANG_ENABLE_OBJC_WEAK = YES;
+				CLANG_WARN_BLOCK_CAPTURE_AUTORELEASING = YES;
+				CLANG_WARN_BOOL_CONVERSION = YES;
+				CLANG_WARN_COMMA = YES;
+				CLANG_WARN_CONSTANT_CONVERSION = YES;
+				CLANG_WARN_DEPRECATED_OBJC_IMPLEMENTATIONS = YES;
+				CLANG_WARN_DIRECT_OBJC_ISA_USAGE = YES_ERROR;
+				CLANG_WARN_DOCUMENTATION_COMMENTS = YES;
+				CLANG_WARN_EMPTY_BODY = YES;
+				CLANG_WARN_ENUM_CONVERSION = YES;
+				CLANG_WARN_INFINITE_RECURSION = YES;
+				CLANG_WARN_INT_CONVERSION = YES;
+				CLANG_WARN_NON_LITERAL_NULL_CONVERSION = YES;
+				CLANG_WARN_OBJC_IMPLICIT_RETAIN_SELF = YES;
+				CLANG_WARN_OBJC_LITERAL_CONVERSION = YES;
+				CLANG_WARN_OBJC_ROOT_CLASS = YES_ERROR;
+				CLANG_WARN_QUOTED_INCLUDE_IN_FRAMEWORK_HEADER = YES;
+				CLANG_WARN_RANGE_LOOP_ANALYSIS = YES;
+				CLANG_WARN_STRICT_PROTOTYPES = YES;
+				CLANG_WARN_SUSPICIOUS_MOVE = YES;
+				CLANG_WARN_UNGUARDED_AVAILABILITY = YES_AGGRESSIVE;
+				CLANG_WARN_UNREACHABLE_CODE = YES;
+				CLANG_WARN__DUPLICATE_METHOD_MATCH = YES;
+				COPY_PHASE_STRIP = NO;
+				DEBUG_INFORMATION_FORMAT = "dwarf-with-dsym";
+				ENABLE_NS_ASSERTIONS = NO;
+				ENABLE_STRICT_OBJC_MSGSEND = YES;
+				GCC_C_LANGUAGE_STANDARD = gnu11;
+				GCC_NO_COMMON_BLOCKS = YES;
+				GCC_WARN_64_TO_32_BIT_CONVERSION = YES;
+				GCC_WARN_ABOUT_RETURN_TYPE = YES_ERROR;
+				GCC_WARN_UNDECLARED_SELECTOR = YES;
+				GCC_WARN_UNINITIALIZED_AUTOS = YES_AGGRESSIVE;
+				GCC_WARN_UNUSED_FUNCTION = YES;
+				GCC_WARN_UNUSED_VARIABLE = YES;
+				MTL_ENABLE_DEBUG_INFO = NO;
+				MTL_FAST_MATH = YES;
+				SWIFT_COMPILATION_MODE = wholemodule;
+				SWIFT_OPTIMIZATION_LEVEL = "-O";
+			};
+			name = Release;
+		};
+		20C6E03629EF351C00465268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "git.cgTeate.Crazy-Roads";
+				PRODUCT_NAME = Crazy_Roads;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+			};
+			name = Debug;
+		};
+		20C6E03729EF351C00465268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIStatusBarHidden = YES;
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPad = "UIInterfaceOrientationPortrait UIInterfaceOrientationPortraitUpsideDown UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				INFOPLIST_KEY_UISupportedInterfaceOrientations_iPhone = "UIInterfaceOrientationPortrait UIInterfaceOrientationLandscapeLeft UIInterfaceOrientationLandscapeRight";
+				IPHONEOS_DEPLOYMENT_TARGET = 16.4;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "git.cgTeate.Crazy-Roads";
+				PRODUCT_NAME = Crazy_Roads;
+				SDKROOT = iphoneos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = "1,2";
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20C6E03929EF351C00465268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "git.cgTeate.Crazy-Roads";
+				PRODUCT_NAME = Crazy_Roads;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 16.4;
+			};
+			name = Debug;
+		};
+		20C6E03A29EF351C00465268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = "tvOS App Icon & Top Shelf Image";
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_STYLE = Automatic;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
+				INFOPLIST_KEY_UIMainStoryboardFile = Main;
+				INFOPLIST_KEY_UIUserInterfaceStyle = Automatic;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/Frameworks",
+				);
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "git.cgTeate.Crazy-Roads";
+				PRODUCT_NAME = Crazy_Roads;
+				SDKROOT = appletvos;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+				TARGETED_DEVICE_FAMILY = 3;
+				TVOS_DEPLOYMENT_TARGET = 16.4;
+				VALIDATE_PRODUCT = YES;
+			};
+			name = Release;
+		};
+		20C6E03C29EF351C00465268 /* Debug */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Crazy_Roads macOS/Crazy_Roads_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "git.cgTeate.Crazy-Roads";
+				PRODUCT_NAME = Crazy_Roads;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Debug;
+		};
+		20C6E03D29EF351C00465268 /* Release */ = {
+			isa = XCBuildConfiguration;
+			buildSettings = {
+				ASSETCATALOG_COMPILER_APPICON_NAME = AppIcon;
+				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
+				CODE_SIGN_ENTITLEMENTS = "Crazy_Roads macOS/Crazy_Roads_macOS.entitlements";
+				CODE_SIGN_STYLE = Automatic;
+				COMBINE_HIDPI_IMAGES = YES;
+				CURRENT_PROJECT_VERSION = 1;
+				GENERATE_INFOPLIST_FILE = YES;
+				INFOPLIST_KEY_NSHumanReadableCopyright = "";
+				INFOPLIST_KEY_NSMainStoryboardFile = Main;
+				INFOPLIST_KEY_NSPrincipalClass = NSApplication;
+				LD_RUNPATH_SEARCH_PATHS = (
+					"$(inherited)",
+					"@executable_path/../Frameworks",
+				);
+				MACOSX_DEPLOYMENT_TARGET = 13.3;
+				MARKETING_VERSION = 1.0;
+				PRODUCT_BUNDLE_IDENTIFIER = "git.cgTeate.Crazy-Roads";
+				PRODUCT_NAME = Crazy_Roads;
+				SDKROOT = macosx;
+				SWIFT_EMIT_LOC_STRINGS = YES;
+				SWIFT_VERSION = 5.0;
+			};
+			name = Release;
+		};
+/* End XCBuildConfiguration section */
+
+/* Begin XCConfigurationList section */
+		20C6DFF629EF351800465268 /* Build configuration list for PBXProject "Crazy_Roads" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C6E03329EF351C00465268 /* Debug */,
+				20C6E03429EF351C00465268 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20C6E03529EF351C00465268 /* Build configuration list for PBXNativeTarget "Crazy_Roads iOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C6E03629EF351C00465268 /* Debug */,
+				20C6E03729EF351C00465268 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20C6E03829EF351C00465268 /* Build configuration list for PBXNativeTarget "Crazy_Roads tvOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C6E03929EF351C00465268 /* Debug */,
+				20C6E03A29EF351C00465268 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+		20C6E03B29EF351C00465268 /* Build configuration list for PBXNativeTarget "Crazy_Roads macOS" */ = {
+			isa = XCConfigurationList;
+			buildConfigurations = (
+				20C6E03C29EF351C00465268 /* Debug */,
+				20C6E03D29EF351C00465268 /* Release */,
+			);
+			defaultConfigurationIsVisible = 0;
+			defaultConfigurationName = Release;
+		};
+/* End XCConfigurationList section */
+	};
+	rootObject = 20C6DFF329EF351800465268 /* Project object */;
+}

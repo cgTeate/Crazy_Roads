@@ -6,7 +6,19 @@
 //
 
 import Foundation
+import SceneKit
 
+//helper functions to calculate radians values for the angles, so we don't have to calculate it manually
+let degreesPerRadians = Float(Double.pi/180)
+let radiansPerDegrees = Float(180/Double.pi)
+
+func toRadians(angle: Float) -> Float {
+    return angle * degreesPerRadians
+}
+
+func toRadians(angle: CGFloat) -> CGFloat {
+    return angle * CGFloat(degreesPerRadians)
+}
 
 //bool function to decide whether we use a grass or road lane
 func randomBool(odds: Int) -> Bool {

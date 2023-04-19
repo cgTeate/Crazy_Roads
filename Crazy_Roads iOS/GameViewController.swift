@@ -37,7 +37,7 @@ class GameViewController: UIViewController {
         scene.rootNode.addChildNode(mapNode)
         
         for _ in 0..<20 {
-            let type = LaneType.grass
+            let type = randomBool(odds: 3) ? LaneType.grass : LaneType.road
             let lane = LaneNode(type: type, width: 21)
             lane.position = SCNVector3(x: 0, y: 0, z: 5 - Float(laneCount))
             laneCount += 1
@@ -64,7 +64,7 @@ class GameViewController: UIViewController {
     func setupCamera() {
         cameraNode.camera = SCNCamera()
         cameraNode.position = SCNVector3(x: 0, y: 10, z: 0)
-        cameraNode.eulerAngles = SCNVector3(x: -.pi/2, y: 0, z: 0)
+        cameraNode.eulerAngles = SCNVector3(x: -toRadians(angle: 60), y: toRadians(angle: 20), z: 0)
         scene.rootNode.addChildNode(cameraNode)
     }
 }

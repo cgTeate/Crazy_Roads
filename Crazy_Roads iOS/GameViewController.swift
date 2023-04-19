@@ -52,7 +52,7 @@ class GameViewController: UIViewController {
         sceneView.delegate = self
         
         scene = SCNScene()
-        
+        scene.physicsWorld.contactDelegate = self //makes sure physical contacts in our scene get handled in physics delegate method down in the extension
         sceneView.scene = scene
         
         scene.rootNode.addChildNode(mapNode)
@@ -174,7 +174,9 @@ class GameViewController: UIViewController {
     func jumpForward() {
         if let action = jumpForwardAction {
             addLanes()
-            playerNode.runAction(action)
+            playerNode.runAction(action, completionHandler: {
+                self.checkBlocks()
+            })
         }
     }
     
@@ -268,28 +270,73 @@ extension GameViewController: SCNSceneRendererDelegate {
     
 }
 
-//handleSwipe is similar to MouseHandler in Java Swing, handles the actions/events
+//SCNPhysicsContactDelegate used to check for contacts in the game
+extension GameViewController: SCNPhysicsContactDelegate {
+    
+    func physicsWorld(_ world: SCNPhysicsWorld, didBegin contact: SCNPhysicsContact) {
+        guard let categoryA = contact.nodeA.physicsBody?.categoryBitMask, let categoryB = contact.nodeB.physicsBody?.categoryBitMask else {
+            return
+        }
+        
+        let mask = categoryA | categoryB
+        
+        switch mask {
+        case PhysicsCategory.chicken | PhysicsCategory.vehicle:
+            print("Game Over")
+        case PhysicsCategory.vegetation | PhysicsCategory.collisionTestFront:
+            frontBlocked = true
+        case PhysicsCategory.vegetation | PhysicsCategory.collisionTestRight:
+            rightBlocked = true
+        case PhysicsCategory.vegetation | PhysicsCategory.collisionTestLeft:
+            leftBlocked = true
+        default:
+            break
+        }
+    }
+    
+}
+
+//handleSwipe is similar to MouseHandler in Java Swing, handles the actions/events/animations
 extension GameViewController {
     
     @objc func handleSwipe(_ sender: UISwipeGestureRecognizer) {
         
         switch sender.direction {
         case UISwipeGestureRecognizer.Direction.up:
-            jumpForward()
+            if !frontBlocked {
+                jumpForward()
+            }
         case UISwipeGestureRecognizer.Direction.right:
-            if playerNode.position.x < 10 {
+            if playerNode.position.x < 10 && !rightBlocked {
                 if let action = jumpRightAction {
-                    playerNode.runAction(action)
+                    playerNode.runAction(action, completionHandler: {
+                        self.checkBlocks()
+                    })
                 }
             }
         case UISwipeGestureRecognizer.Direction.left:
-            if playerNode.position.x > -10 {
+            if playerNode.position.x > -10 && !leftBlocked {
                 if let action = jumpLeftAction {
-                    playerNode.runAction(action)
+                    playerNode.runAction(action, completionHandler: {
+                        self.checkBlocks()
+                    })
                 }
             }
         default:
             break
+        }
+    }
+    
+    //checks if the blocked directions are able to be unblocked
+    func checkBlocks() {
+        if scene.physicsWorld.contactTest(with: collisionNode.front.physicsBody!, options: nil).isEmpty {
+            frontBlocked = false
+        }
+        if scene.physicsWorld.contactTest(with: collisionNode.right.physicsBody!, options: nil).isEmpty {
+            rightBlocked = false
+        }
+        if scene.physicsWorld.contactTest(with: collisionNode.left.physicsBody!, options: nil).isEmpty {
+            leftBlocked = false
         }
     }
         

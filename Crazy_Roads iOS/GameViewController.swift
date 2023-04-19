@@ -249,6 +249,7 @@ extension GameViewController: SCNSceneRendererDelegate {
     
     func renderer(_ renderer: SCNSceneRenderer, didApplyAnimationsAtTime time: TimeInterval) {
         updatePositions()
+        updateTraffic()
     }
     
 }

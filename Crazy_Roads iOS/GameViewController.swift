@@ -18,6 +18,7 @@ class GameViewController: UIViewController {
     var cameraNode = SCNNode()
     var lightNode = SCNNode() //parent node that contains all of the lights
     var playerNode = SCNNode()
+    var collisionNode = CollisionNode()
     var mapNode = SCNNode() //contains all of the lanes as children, so we group them together
     var lanes = [LaneNode]() //contains all of the lane nodes as you move through the game
     var laneCount = 0 //used to position lanes correctly, each lane should be placed after the preceding lane
@@ -28,11 +29,15 @@ class GameViewController: UIViewController {
     var driveRightAction: SCNAction?
     var driveLeftAction: SCNAction?
 
+    var frontBlocked = false //bool values used to determine if a certain direction is currently blocked
+    var rightBlocked = false
+    var leftBlocked = false
     
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScene()
         setupPlayer()
+        setupCollisioNode()
         setupFloor()
         setupCamera()
         setupLight()
@@ -66,6 +71,13 @@ class GameViewController: UIViewController {
             playerNode.position = SCNVector3(x: 0, y: 0.3, z: 0)
             scene.rootNode.addChildNode(playerNode)
         }
+    }
+    
+    //sets up the collision nodes around the player
+    func setupCollisioNode() {
+        
+        collisionNode.position = playerNode.position
+        scene.rootNode.addChildNode(collisionNode)
     }
     
     //Create floor to use it as a plane, so we can position all of our elements on
@@ -168,6 +180,8 @@ class GameViewController: UIViewController {
     
     //updates camera position and light nodes according to player position
     func updatePositions() {
+        collisionNode.position = playerNode.position
+        
         //offsets the camera to the right and back of the player model
         let diffX = (playerNode.position.x + 1 - cameraNode.position.x)
         let diffZ = (playerNode.position.z + 2 - cameraNode.position.z)

@@ -16,6 +16,7 @@ class GameViewController: UIViewController {
     var sceneView: SCNView!
     
     var cameraNode = SCNNode()
+    var lightNode = SCNNode() //parent node that contains all of the lights
     var mapNode = SCNNode() //contains all of the lanes as children, so we group them together
     var lanes = [LaneNode]() //contains all of the lane nodes as you move through the game
     var laneCount = 0 //used to position lanes correctly, each lane should be placed after the preceding lane
@@ -25,6 +26,7 @@ class GameViewController: UIViewController {
         setupScene()
         setupFloor()
         setupCamera()
+        setupLight()
     }
     
     //initializes both scene and sceneView properties
@@ -66,5 +68,27 @@ class GameViewController: UIViewController {
         cameraNode.position = SCNVector3(x: 0, y: 10, z: 0)
         cameraNode.eulerAngles = SCNVector3(x: -toRadians(angle: 60), y: toRadians(angle: 20), z: 0)
         scene.rootNode.addChildNode(cameraNode)
+    }
+    
+    //creates two light nodes
+        //one ambient light for evenly distributed light throughout scene
+        //one directional light which will allow to cast shadows and emphasize three dimensional elements
+    func setupLight() {
+        let ambientNode = SCNNode()
+        ambientNode.light = SCNLight()
+        ambientNode.light?.type = .ambient
+        
+        let directionalNode = SCNNode()
+        directionalNode.light = SCNLight()
+        directionalNode.light?.type = .directional
+        directionalNode.light?.castsShadow = true
+        directionalNode.light?.shadowColor = UIColor(red: 0.4, green: 0.4, blue: 0.4, alpha: 1)
+        directionalNode.position = SCNVector3(x: -5, y: 5, z: 0)
+        directionalNode.eulerAngles = SCNVector3(x: 0, y: -toRadians(angle: 90), z: -toRadians(angle: 45))
+        
+        lightNode.addChildNode(ambientNode)
+        lightNode.addChildNode(directionalNode)
+        lightNode.position = cameraNode.position
+        scene.rootNode.addChildNode(lightNode)
     }
 }

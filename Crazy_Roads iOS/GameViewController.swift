@@ -17,6 +17,7 @@ class GameViewController: UIViewController {
     
     var cameraNode = SCNNode()
     var lightNode = SCNNode() //parent node that contains all of the lights
+    var playerNode = SCNNode()
     var mapNode = SCNNode() //contains all of the lanes as children, so we group them together
     var lanes = [LaneNode]() //contains all of the lane nodes as you move through the game
     var laneCount = 0 //used to position lanes correctly, each lane should be placed after the preceding lane
@@ -24,6 +25,7 @@ class GameViewController: UIViewController {
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScene()
+        setupPlayer()
         setupFloor()
         setupCamera()
         setupLight()
@@ -46,6 +48,17 @@ class GameViewController: UIViewController {
             lanes.append(lane)
             mapNode.addChildNode(lane)
             
+        }
+    }
+    
+    func setupPlayer() {
+        guard let playerScene = SCNScene(named: "Art.scnassets/Chicken.scn") else {
+            return
+        }
+        if let player = playerScene.rootNode.childNode(withName: "player", recursively: true) {
+            playerNode = player
+            playerNode.position = SCNVector3(x: 0, y: 0.3, z: 0)
+            scene.rootNode.addChildNode(playerNode)
         }
     }
     

@@ -169,10 +169,10 @@ class GameViewController: UIViewController {
     }
     
     //removes lanes behind the player to handle memory overload
+    //similar to removing elements from the beginning of an ArrayList in Java
     func removeUnusedLanes() {
         //loop through each child in the mapNode
         //check if passed node is not visible inside the view of another node (camera) and is behind the camera
-        
         for child in mapNode.childNodes {
             if !sceneView.isNode(child, insideFrustumOf: cameraNode) && child.worldPosition.z > playerNode.worldPosition.z {
                 child.removeFromParentNode()

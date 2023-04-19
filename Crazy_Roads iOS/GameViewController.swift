@@ -40,6 +40,8 @@ class GameViewController: UIViewController {
     //initializes both scene and sceneView properties
     func setupScene() {
         sceneView = (view as! SCNView)
+        sceneView.delegate = self
+        
         scene = SCNScene()
         
         sceneView.scene = scene
@@ -152,6 +154,25 @@ class GameViewController: UIViewController {
         }
     }
     
+    //updates camera position and light nodes according to player position
+    func updatePositions() {
+        //offsets the camera to the right and back of the player model
+        let diffX = (playerNode.position.x + 1 - cameraNode.position.x)
+        let diffZ = (playerNode.position.z + 2 - cameraNode.position.z)
+        cameraNode.position.x += diffX
+        cameraNode.position.z += diffZ
+        
+        lightNode.position = cameraNode.position
+    }
+    
+}
+
+//SCNSceneRendererDelegate handles updates to the game
+extension GameViewController: SCNSceneRendererDelegate {
+    
+    func renderer(_ renderer: SCNSceneRenderer, didApplyAnimationsAtTime time: TimeInterval) {
+        updatePositions()
+    }
     
 }
 

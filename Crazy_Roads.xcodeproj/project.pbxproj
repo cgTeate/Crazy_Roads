@@ -29,6 +29,7 @@
 		20C6E03229EF351C00465268 /* Assets.xcassets in Resources */ = {isa = PBXBuildFile; fileRef = 20C6DFFA29EF351B00465268 /* Assets.xcassets */; };
 		20C6E03F29EF3EAE00465268 /* LaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E03E29EF3EAE00465268 /* LaneNode.swift */; };
 		20C6E04129EF72FC00465268 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E04029EF72FC00465268 /* Utils.swift */; };
+		20C6E04329F0643400465268 /* CollisionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E04229F0643400465268 /* CollisionNode.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -52,6 +53,7 @@
 		20C6E02929EF351C00465268 /* Crazy_Roads_macOS.entitlements */ = {isa = PBXFileReference; lastKnownFileType = text.plist.entitlements; path = Crazy_Roads_macOS.entitlements; sourceTree = "<group>"; };
 		20C6E03E29EF3EAE00465268 /* LaneNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaneNode.swift; sourceTree = "<group>"; };
 		20C6E04029EF72FC00465268 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
+		20C6E04229F0643400465268 /* CollisionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionNode.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -119,6 +121,7 @@
 				20C6E00929EF351B00465268 /* LaunchScreen.storyboard */,
 				20C6E03E29EF3EAE00465268 /* LaneNode.swift */,
 				20C6E04029EF72FC00465268 /* Utils.swift */,
+				20C6E04229F0643400465268 /* CollisionNode.swift */,
 			);
 			path = "Crazy_Roads iOS";
 			sourceTree = "<group>";
@@ -280,6 +283,7 @@
 			isa = PBXSourcesBuildPhase;
 			buildActionMask = 2147483647;
 			files = (
+				20C6E04329F0643400465268 /* CollisionNode.swift in Sources */,
 				20C6E04129EF72FC00465268 /* Utils.swift in Sources */,
 				20C6E00529EF351B00465268 /* GameViewController.swift in Sources */,
 				20C6E02A29EF351C00465268 /* GameController.swift in Sources */,

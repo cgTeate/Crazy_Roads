@@ -38,6 +38,7 @@ class GameViewController: UIViewController {
         setupLight()
         setUpGestures()
         setupActions()
+        setupTraffic()
     }
     
     //initializes both scene and sceneView properties
@@ -149,6 +150,15 @@ class GameViewController: UIViewController {
         
     }
     
+    //initially sets up driving animations for the lanes
+    func setupTraffic() {
+        for lane in lanes {
+            if let trafficNode = lane.trafficNode {
+                addActions(for: trafficNode)
+            }
+        }
+    }
+    
     func jumpForward() {
         if let action = jumpForwardAction {
             addLanes()
@@ -197,6 +207,23 @@ class GameViewController: UIViewController {
         laneCount += 1
         lanes.append(lane)
         mapNode.addChildNode(lane)
+        
+        //only gives us a value for road lanes that have valid traffic
+        //If lane is a road, then call addActions method to add driving animations for the vehicles
+        if let trafficNode = lane.trafficNode {
+            addActions(for: trafficNode)
+        }
+    }
+    
+    
+    func addActions(for trafficNode: TrafficNode) {
+        guard let driveAction = trafficNode.directionRight ? driveRightAction : driveLeftAction else {
+            return
+        }
+        driveAction.speed = 1/CGFloat(trafficNode.type + 1) + 0.5
+        for vehicle in trafficNode.childNodes {
+            vehicle.runAction(driveAction)
+        }
     }
     
 }

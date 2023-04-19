@@ -16,6 +16,14 @@ struct Models {
     private static let hedgeScene = SCNScene(named: "Art.scnassets/Hedge.scn")!
     static let hedge = hedgeScene.rootNode.childNode(withName: "hedge", recursively: true)!
     
+    private static let carScene = SCNScene(named: "Art.scnassets/PurpleCar.scn")!
+    static let car = carScene.rootNode.childNode(withName: "car", recursively: true)!
+    
+    private static let blueTruckScene = SCNScene(named: "Art.scnassets/BlueTruck.scn")!
+    static let blueTruck = blueTruckScene.rootNode.childNode(withName: "truck", recursively: true)!
+    
+    private static let firetruckScene = SCNScene(named: "Art.scnassets/Firetruck.scn")!
+    static let firetruck = firetruckScene.rootNode.childNode(withName: "truck", recursively: true)!
 }
 
 //helper functions to calculate radians values for the angles, so we don't have to calculate it manually

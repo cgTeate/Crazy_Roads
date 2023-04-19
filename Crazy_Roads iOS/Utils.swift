@@ -8,6 +8,15 @@
 import Foundation
 import SceneKit
 
+struct PhysicsCategory {
+    static let chicken = 1
+    static let vehicle = 2
+    static let vegetation = 4
+    static let collisionTestFront = 8
+    static let collisionTestRight = 16
+    static let collisionTestLeft = 32
+}
+
 struct Models {
     
     private static let treeScene = SCNScene(named: "Art.scnassets/Tree.scn")!

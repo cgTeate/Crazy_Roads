@@ -177,6 +177,22 @@ class GameViewController: UIViewController {
         lightNode.position = cameraNode.position
     }
     
+    //updates traffic to reposition at the beginning of the lane when traffic gets to the end of the lane
+    func updateTraffic() {
+        for lane in lanes {
+            guard let trafficNode = lane.trafficNode else {
+                continue
+            }
+            for vehicle in trafficNode.childNodes {
+                if vehicle.position.x > 10 {
+                    vehicle.position.x = -10
+                } else if vehicle.position.x < -10 {
+                    vehicle.position.x = 10
+                }
+            }
+        }
+    }
+    
     //adds more lanes as the player moves forward
     func addLanes() {
         for _ in 0...1 {

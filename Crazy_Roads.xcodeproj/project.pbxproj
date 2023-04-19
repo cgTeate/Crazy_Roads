@@ -30,6 +30,8 @@
 		20C6E03F29EF3EAE00465268 /* LaneNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E03E29EF3EAE00465268 /* LaneNode.swift */; };
 		20C6E04129EF72FC00465268 /* Utils.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E04029EF72FC00465268 /* Utils.swift */; };
 		20C6E04329F0643400465268 /* CollisionNode.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E04229F0643400465268 /* CollisionNode.swift */; };
+		20C6E04529F070B500465268 /* 8-BIT WONDER.TTF in Resources */ = {isa = PBXBuildFile; fileRef = 20C6E04429F070B500465268 /* 8-BIT WONDER.TTF */; };
+		20C6E04929F0729B00465268 /* GameHUD.swift in Sources */ = {isa = PBXBuildFile; fileRef = 20C6E04829F0729B00465268 /* GameHUD.swift */; };
 /* End PBXBuildFile section */
 
 /* Begin PBXFileReference section */
@@ -54,6 +56,8 @@
 		20C6E03E29EF3EAE00465268 /* LaneNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = LaneNode.swift; sourceTree = "<group>"; };
 		20C6E04029EF72FC00465268 /* Utils.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = Utils.swift; sourceTree = "<group>"; };
 		20C6E04229F0643400465268 /* CollisionNode.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = CollisionNode.swift; sourceTree = "<group>"; };
+		20C6E04429F070B500465268 /* 8-BIT WONDER.TTF */ = {isa = PBXFileReference; lastKnownFileType = file; path = "8-BIT WONDER.TTF"; sourceTree = "<group>"; };
+		20C6E04829F0729B00465268 /* GameHUD.swift */ = {isa = PBXFileReference; lastKnownFileType = sourcecode.swift; path = GameHUD.swift; sourceTree = "<group>"; };
 /* End PBXFileReference section */
 
 /* Begin PBXFrameworksBuildPhase section */
@@ -95,6 +99,7 @@
 		20C6DFF729EF351800465268 /* Crazy_Roads Shared */ = {
 			isa = PBXGroup;
 			children = (
+				20C6E04429F070B500465268 /* 8-BIT WONDER.TTF */,
 				20C6DFF829EF351800465268 /* GameController.swift */,
 				20C6DFF929EF351800465268 /* Art.scnassets */,
 				20C6DFFA29EF351B00465268 /* Assets.xcassets */,
@@ -122,6 +127,7 @@
 				20C6E03E29EF3EAE00465268 /* LaneNode.swift */,
 				20C6E04029EF72FC00465268 /* Utils.swift */,
 				20C6E04229F0643400465268 /* CollisionNode.swift */,
+				20C6E04829F0729B00465268 /* GameHUD.swift */,
 			);
 			path = "Crazy_Roads iOS";
 			sourceTree = "<group>";
@@ -251,6 +257,7 @@
 				20C6E00829EF351B00465268 /* Main.storyboard in Resources */,
 				20C6E00B29EF351B00465268 /* LaunchScreen.storyboard in Resources */,
 				20C6E03029EF351C00465268 /* Assets.xcassets in Resources */,
+				20C6E04529F070B500465268 /* 8-BIT WONDER.TTF in Resources */,
 				20C6E02D29EF351C00465268 /* Art.scnassets in Resources */,
 			);
 			runOnlyForDeploymentPostprocessing = 0;
@@ -285,6 +292,7 @@
 			files = (
 				20C6E04329F0643400465268 /* CollisionNode.swift in Sources */,
 				20C6E04129EF72FC00465268 /* Utils.swift in Sources */,
+				20C6E04929F0729B00465268 /* GameHUD.swift in Sources */,
 				20C6E00529EF351B00465268 /* GameViewController.swift in Sources */,
 				20C6E02A29EF351C00465268 /* GameController.swift in Sources */,
 				20C6E00329EF351B00465268 /* AppDelegate.swift in Sources */,
@@ -474,6 +482,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				Fonts_Provided_By_App = "8-BIT WONDER.TTF";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;
@@ -503,6 +512,7 @@
 				ASSETCATALOG_COMPILER_GLOBAL_ACCENT_COLOR_NAME = AccentColor;
 				CODE_SIGN_STYLE = Automatic;
 				CURRENT_PROJECT_VERSION = 1;
+				Fonts_Provided_By_App = "8-BIT WONDER.TTF";
 				GENERATE_INFOPLIST_FILE = YES;
 				INFOPLIST_KEY_UIApplicationSupportsIndirectInputEvents = YES;
 				INFOPLIST_KEY_UILaunchStoryboardName = LaunchScreen;

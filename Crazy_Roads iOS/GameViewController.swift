@@ -29,6 +29,8 @@ class GameViewController: UIViewController {
         setupFloor()
         setupCamera()
         setupLight()
+        setUpGestures()
+        setupActions()
     }
     
     //initializes both scene and sceneView properties
@@ -104,4 +106,32 @@ class GameViewController: UIViewController {
         lightNode.position = cameraNode.position
         scene.rootNode.addChildNode(lightNode)
     }
+    
+    func setUpGestures() {
+        let swipeUp = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
+        swipeUp.direction = .up
+        sceneView.addGestureRecognizer(swipeUp)
+        
+        let swipeRight = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
+        swipeRight.direction = .right
+        sceneView.addGestureRecognizer(swipeRight)
+        
+        let swipeLeft = UISwipeGestureRecognizer(target: self, action: #selector(handleSwipe))
+        swipeLeft.direction = .left
+        sceneView.addGestureRecognizer(swipeLeft)
+    }
+    
+    func setupActions() {
+        
+    }
+    
+    
+}
+
+extension GameViewController {
+    
+    @objc func handleSwipe(_ sender: UISwipeGestureRecognizer) {
+        
+    }
+        
 }

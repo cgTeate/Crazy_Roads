@@ -25,6 +25,9 @@ class GameViewController: UIViewController {
     var jumpForwardAction: SCNAction?
     var jumpRightAction: SCNAction?
     var jumpLeftAction: SCNAction?
+    var driveRightAction: SCNAction?
+    var driveLeftAction: SCNAction?
+
     
     override func viewDidLoad() {
         super.viewDidLoad()
@@ -140,6 +143,10 @@ class GameViewController: UIViewController {
         jumpForwardAction = SCNAction.group([turnForwardAction, jumpAction, moveForwardAction])
         jumpRightAction = SCNAction.group([turnRightAction, jumpAction, moveRightAction])
         jumpLeftAction = SCNAction.group([turnLeftAction, jumpAction, moveLeftAction])
+        
+        driveRightAction = SCNAction.repeatForever(SCNAction.moveBy(x: 2.0, y: 0, z: 0, duration: 1.0))
+        driveLeftAction = SCNAction.repeatForever(SCNAction.moveBy(x: -2.0, y: 0, z: 0, duration: 1.0))
+        
     }
     
     func jumpForward() {

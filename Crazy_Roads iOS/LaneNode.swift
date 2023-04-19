@@ -32,8 +32,9 @@ class TrafficNode: SCNNode {
 class LaneNode: SCNNode {
     
     let type: LaneType
+    var trafficNode: TrafficNode? //optional because it will only be set if type of lane is road
     
-    //creates lane depending on the type (grass or road)
+    //initializes lane depending on the type (grass or road)
     init(type: LaneType, width: CGFloat) {
         self.type = type
         super.init()
@@ -48,6 +49,8 @@ class LaneNode: SCNNode {
             guard let roadTexture = UIImage(named: "Art.scnassets/asphalt.png") else {
                 break
             }
+            trafficNode = TrafficNode(type: Int(arc4random_uniform(UInt32(3))), directionRight: randomBool(odds: 2))
+            addChildNode(trafficNode!)
             createLane(width: width, height: 0.05, image: roadTexture)
         }
     }
@@ -77,6 +80,7 @@ class LaneNode: SCNNode {
                     laneNode.addChildNode(vegetation)
                 }
             } else if type == .road {
+                //spawns cars depending on the gap between them so none overlap
                 carGap += 1
                 if carGap > 3 {
                     guard let trafficNode = trafficNode else {
@@ -99,6 +103,20 @@ class LaneNode: SCNNode {
     func getVegetation() -> SCNNode {
         let vegetation = randomBool(odds: 2) ? Models.tree.clone() : Models.hedge.clone()
         return vegetation
+    }
+    
+    //creates a copy node of the vehicle type, only allows 1 vehicle type per lane
+    func getVehicle(for type: Int) -> SCNNode {
+        switch type {
+        case 0:
+            return Models.car.clone()
+        case 1:
+            return Models.blueTruck.clone()
+        case 2:
+            return Models.firetruck.clone()
+        default:
+            return Models.car.clone()
+        }
     }
     
     required init?(coder aDecoder: NSCoder) {

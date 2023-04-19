@@ -8,12 +8,20 @@
 import UIKit
 import QuartzCore
 import SceneKit
+import SpriteKit
+
+enum GameState {
+    case menu, playing, gameOver
+}
 
 class GameViewController: UIViewController {
     
     //global variables
     var scene: SCNScene!
     var sceneView: SCNView!
+    var gameHUD: GameHUD!
+    var gameState = GameState.menu
+    var score = 0
     
     var cameraNode = SCNNode()
     var lightNode = SCNNode() //parent node that contains all of the lights
@@ -28,6 +36,7 @@ class GameViewController: UIViewController {
     var jumpLeftAction: SCNAction?
     var driveRightAction: SCNAction?
     var driveLeftAction: SCNAction?
+    var dieAction: SCNAction?
 
     var frontBlocked = false //bool values used to determine if a certain direction is currently blocked
     var rightBlocked = false
@@ -35,6 +44,10 @@ class GameViewController: UIViewController {
     
     override func viewDidLoad() {
         super.viewDidLoad()
+        buildGame()
+    }
+    
+    func buildGame() {
         setupScene()
         setupPlayer()
         setupCollisioNode()

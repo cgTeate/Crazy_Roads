@@ -22,6 +22,10 @@ class GameViewController: UIViewController {
     var lanes = [LaneNode]() //contains all of the lane nodes as you move through the game
     var laneCount = 0 //used to position lanes correctly, each lane should be placed after the preceding lane
     
+    var jumpForwardAction: SCNAction?
+    var jumpRightAction: SCNAction?
+    var jumpLeftAction: SCNAction?
+    
     override func viewDidLoad() {
         super.viewDidLoad()
         setupScene()
@@ -121,17 +125,59 @@ class GameViewController: UIViewController {
         sceneView.addGestureRecognizer(swipeLeft)
     }
     
+    //sets up the action movement
     func setupActions() {
+        let moveUpAction = SCNAction.moveBy(x: 0, y: 1.0, z: 0, duration: 0.1)
+        let moveDownAction = SCNAction.moveBy(x: 0, y: -1.0, z: 0, duration: 0.1)
+        moveUpAction.timingMode = .easeOut
+        moveDownAction.timingMode = .easeIn
+        let jumpAction = SCNAction.sequence([moveUpAction,moveDownAction])
         
+        let moveForwardAction = SCNAction.moveBy(x: 0, y: 0, z: -1.0, duration: 0.2)
+        let moveRightAction = SCNAction.moveBy(x: 1.0, y: 0, z: 0, duration: 0.2)
+        let moveLeftAction = SCNAction.moveBy(x: -1.0, y: 0, z: 0, duration: 0.2)
+        
+        let turnForwardAction = SCNAction.rotateTo(x: 0, y: toRadians(angle: 180), z: 0, duration: 0.2, usesShortestUnitArc: true)
+        let turnRightAction = SCNAction.rotateTo(x: 0, y: toRadians(angle: 90), z: 0, duration: 0.2, usesShortestUnitArc: true)
+        let turnLeftAction = SCNAction.rotateTo(x: 0, y: toRadians(angle: -90), z: 0, duration: 0.2, usesShortestUnitArc: true)
+        
+        jumpForwardAction = SCNAction.group([turnForwardAction, jumpAction, moveForwardAction])
+        jumpRightAction = SCNAction.group([turnRightAction, jumpAction, moveRightAction])
+        jumpLeftAction = SCNAction.group([turnLeftAction, jumpAction, moveLeftAction])
+    }
+    
+    func jumpForward() {
+        if let action = jumpForwardAction {
+            playerNode.runAction(action)
+        }
     }
     
     
 }
 
+//handleSwipe is similar to MouseHandler in Java Swing, handles the actions/events
 extension GameViewController {
     
     @objc func handleSwipe(_ sender: UISwipeGestureRecognizer) {
         
+        switch sender.direction {
+        case UISwipeGestureRecognizer.Direction.up:
+            jumpForward()
+        case UISwipeGestureRecognizer.Direction.right:
+            if playerNode.position.x < 10 {
+                if let action = jumpRightAction {
+                    playerNode.runAction(action)
+                }
+            }
+        case UISwipeGestureRecognizer.Direction.left:
+            if playerNode.position.x > -10 {
+                if let action = jumpLeftAction {
+                    playerNode.runAction(action)
+                }
+            }
+        default:
+            break
+        }
     }
         
 }

@@ -8,6 +8,16 @@
 import Foundation
 import SceneKit
 
+struct Models {
+    
+    private static let treeScene = SCNScene(named: "Art.scnassets/Tree.scn")!
+    static let tree = treeScene.rootNode.childNode(withName: "tree", recursively: true)!
+    
+    private static let hedgeScene = SCNScene(named: "Art.scnassets/Hedge.scn")!
+    static let hedge = hedgeScene.rootNode.childNode(withName: "hedge", recursively: true)!
+    
+}
+
 //helper functions to calculate radians values for the angles, so we don't have to calculate it manually
 let degreesPerRadians = Float(Double.pi/180)
 let radiansPerDegrees = Float(180/Double.pi)

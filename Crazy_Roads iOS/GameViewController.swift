@@ -63,6 +63,19 @@ class GameViewController: UIViewController {
         }
     }
     
+    //resets the game to original state
+    func resetGame() {
+        scene.rootNode.enumerateChildNodes { (node, _) in
+            node.removeFromParentNode()
+        }
+        scene = nil
+        gameState = .menu
+        score = 0
+        laneCount = 0
+        lanes = [LaneNode]()
+        buildGame()
+    }
+    
     func buildGame() {
         setupScene()
         setupPlayer()
@@ -201,6 +214,8 @@ class GameViewController: UIViewController {
         driveRightAction = SCNAction.repeatForever(SCNAction.moveBy(x: 2.0, y: 0, z: 0, duration: 1.0))
         driveLeftAction = SCNAction.repeatForever(SCNAction.moveBy(x: -2.0, y: 0, z: 0, duration: 1.0))
         
+        dieAction = SCNAction.moveBy(x: 0, y: 5, z: 0, duration: 1.0)
+        
     }
     
     //initially sets up driving animations for the lanes
@@ -217,6 +232,8 @@ class GameViewController: UIViewController {
             addLanes()
             playerNode.runAction(action, completionHandler: {
                 self.checkBlocks()
+                self.score += 1
+                self.gameHUD.pointsLabel?.text = "\(self.score)"
             })
         }
     }
@@ -295,7 +312,25 @@ class GameViewController: UIViewController {
         }
         driveAction.speed = 1/CGFloat(trafficNode.type + 1) + 0.5
         for vehicle in trafficNode.childNodes {
+            vehicle.removeAllActions() //removes any existing actions before adding new actions to scene
             vehicle.runAction(driveAction)
+        }
+    }
+    
+    //removes all gesture recognizers, runs die movement, and resets the game
+    func gameOver() {
+        DispatchQueue.main.async {
+            if let gestureRecognizers = self.sceneView.gestureRecognizers {
+                for recognizer in gestureRecognizers {
+                    self.sceneView.removeGestureRecognizer(recognizer)
+                }
+            }
+        }
+        gameState = .gameOver
+        if let action = dieAction {
+            playerNode.runAction(action, completionHandler: {
+                self.resetGame()
+            })
         }
     }
     
@@ -323,7 +358,7 @@ extension GameViewController: SCNPhysicsContactDelegate {
         
         switch mask {
         case PhysicsCategory.chicken | PhysicsCategory.vehicle:
-            print("Game Over")
+            gameOver()
         case PhysicsCategory.vegetation | PhysicsCategory.collisionTestFront:
             frontBlocked = true
         case PhysicsCategory.vegetation | PhysicsCategory.collisionTestRight:

@@ -23,8 +23,8 @@ class GameHUD: SKScene {
     }
     
     func addMenuLabels() {
-        logoLabel = SKLabelNode(fontNamed: "8BIT WONDER Nominal")
-        tapToPlayLabel = SKLabelNode(fontNamed: "8BIT WONDER Nominal")
+        logoLabel = SKLabelNode(fontNamed: "Marker Felt")
+        tapToPlayLabel = SKLabelNode(fontNamed: "Marker Felt")
         guard let logoLabel = logoLabel, let tapToPlayLabel = tapToPlayLabel else {
             return
         }
@@ -40,7 +40,7 @@ class GameHUD: SKScene {
     }
     
     func addPointsLabel() {
-        pointsLabel = SKLabelNode(fontNamed: "8BIT WONDER Nominal")
+        pointsLabel = SKLabelNode(fontNamed: "Marker Felt")
         guard let pointsLabel = pointsLabel else {
             return
         }
